@@ -1,0 +1,48 @@
+body{
+	width: 100%; min-height: 100vh;
+	margin:0px;
+	background: #485563;
+	background: -webkit-linear-gradient(to top, #29323c, #485563);
+	background: linear-gradient(to top, #29323c, #485563);
+	display: grid; place-items:center;
+}
+#calculator{
+	width: 300px; height: 400px;
+	background:#fff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: grid;
+	grid-template-rows: 60px 1fr;
+	grid-template-columns: 1frl
+}
+#calculator #display{
+	width: 100%;
+	padding: 1rem; box-sizing: border-box;
+	border: none;
+	background: #29323c;
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #fff;
+}
+#calculator #display:focus{outline:none;}
+#calculator #buttons{
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#calculator #buttons > *:nth-child(4n+4){background:#c2cfdd}
+#calculator #buttons > *:nth-child(1),
+#calculator #buttons > *:nth-child(2),
+#calculator #buttons > *:nth-child(3),
+#calculator #buttons > *:nth-child(4){background: #6c8096;}
+#calculator #buttons > *:nth-child(20){
+	background: #c5b764;	
+}
+#calculator #buttons > *{
+	display: grid; place-items: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #29323c;
+	user-select: none;
+}
+#calculator #buttons > *:hover{background:rgba(0,0,0,0.3); cursor: pointer;}
